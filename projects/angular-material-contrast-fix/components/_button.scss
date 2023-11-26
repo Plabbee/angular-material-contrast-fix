@@ -2,19 +2,19 @@
 
 @mixin _unelevated-button-variant($theme, $palette) {
     &:not(:disabled) {
-        color: mat.get-theme-color($theme, $palette, 500-contrast);
+        color: mat.get-theme-color($theme, $palette, default-contrast);
     }
 }
 
 @mixin _raised-button-variant($theme, $palette) {
     &:not(:disabled) {
-        color: mat.get-theme-color($theme, $palette, 500-contrast);
+        color: mat.get-theme-color($theme, $palette, default-contrast);
     }
 }
 
 
 @mixin _fab-color($theme, $palette) {
-    color: mat.get-theme-color($theme, $palette, 500-contrast);
+    color: mat.get-theme-color($theme, $palette, default-contrast);
 }
 
 @mixin button-theme($theme) {

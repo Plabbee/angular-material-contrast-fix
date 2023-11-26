@@ -17,7 +17,7 @@
 @mixin _slide-toggle-color($theme, $palette) {
     .mdc-switch.mdc-switch--selected:enabled { 
         .mdc-switch__icon {
-            fill: mat.get-theme-color($theme, $palette, 500-contrast);
+            fill: mat.get-theme-color($theme, $palette, default-contrast);
         }
     }
 }

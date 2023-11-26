@@ -16,6 +16,6 @@
 
 @mixin _datepicker-color($theme, $palette) {
     .mat-calendar-body-selected { 
-        color: mat.get-theme-color($theme, $palette, 500-contrast) !important;
+        color: mat.get-theme-color($theme, $palette, default-contrast);
     }
 }
