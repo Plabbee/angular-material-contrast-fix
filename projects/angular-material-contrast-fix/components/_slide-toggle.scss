@@ -1,20 +1,20 @@
 @use '@angular/material' as mat;
 
-@mixin theme($theme) {
+@mixin slide-toggle-theme($theme) {
     .mat-mdc-slide-toggle {
         &.mat-primary {
-            @include _checkbox-color($theme, primary);
+            @include _slide-toggle-color($theme, primary);
         }
         &.mat-accent {
-            @include _checkbox-color($theme, accent);
+            @include _slide-toggle-color($theme, accent);
         }
         &.mat-warn {
-            @include _checkbox-color($theme, warn);
+            @include _slide-toggle-color($theme, warn);
         }
     }
 }
 
-@mixin _checkbox-color($theme, $palette) {
+@mixin _slide-toggle-color($theme, $palette) {
     .mdc-switch.mdc-switch--selected:enabled { 
         .mdc-switch__icon {
             fill: mat.get-theme-color($theme, $palette, 500-contrast);

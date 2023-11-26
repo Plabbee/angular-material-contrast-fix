@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 
-@mixin theme($theme) {
+@mixin checkbox-theme($theme) {
     .mat-mdc-checkbox {
         &.mat-primary {
             @include _checkbox-color($theme, primary);

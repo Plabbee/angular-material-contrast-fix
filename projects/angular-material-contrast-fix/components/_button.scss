@@ -17,7 +17,7 @@
     color: mat.get-theme-color($theme, $palette, 500-contrast);
 }
 
-@mixin theme($theme) {
+@mixin button-theme($theme) {
     .mat-mdc-unelevated-button {
         &.mat-primary {
             @include _unelevated-button-variant($theme, primary);

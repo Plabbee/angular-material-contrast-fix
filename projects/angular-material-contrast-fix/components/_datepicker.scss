@@ -1,20 +1,20 @@
 @use '@angular/material' as mat;
 
-@mixin theme($theme) {
+@mixin datepicker-theme($theme) {
     .mat-datepicker-content {
         &.mat-primary {
-            @include _checkbox-color($theme, primary);
+            @include _datepicker-color($theme, primary);
         }
         &.mat-accent {
-            @include _checkbox-color($theme, accent);
+            @include _datepicker-color($theme, accent);
         }
         &.mat-warn {
-            @include _checkbox-color($theme, warn);
+            @include _datepicker-color($theme, warn);
         }
     }
 }
 
-@mixin _checkbox-color($theme, $palette) {
+@mixin _datepicker-color($theme, $palette) {
     .mat-calendar-body-selected { 
         color: mat.get-theme-color($theme, $palette, 500-contrast) !important;
     }

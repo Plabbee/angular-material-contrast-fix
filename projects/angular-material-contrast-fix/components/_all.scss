@@ -1,0 +1,11 @@
+@use './button';
+@use './checkbox';
+@use './slide-toggle';
+@use './datepicker';
+
+@mixin all-component-themes($theme) {
+    @include button.button-theme($theme);
+    @include checkbox.checkbox-theme($theme);
+    @include slide-toggle.slide-toggle-theme($theme);
+    @include datepicker.datepicker-theme($theme);
+}
