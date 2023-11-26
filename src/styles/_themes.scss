@@ -1,0 +1,40 @@
+@use '@angular/material' as mat;
+@use './palettes' as palettes;
+@use './angular-material-contrast-fix' as materialContrastFix;
+
+$original-palette-light-theme: mat.define-light-theme((
+    color: (
+        primary: mat.define-palette(palettes.$palette-original-teal),
+        accent: mat.define-palette(palettes.$palette-original-orange),
+        warn: mat.define-palette(palettes.$palette-original-pink)
+    )
+));
+$modified-palette-light-theme: mat.define-light-theme((
+    color: (
+        primary: mat.define-palette(palettes.$palette-modified-teal),
+        accent: mat.define-palette(palettes.$palette-modified-orange),
+        warn: mat.define-palette(palettes.$palette-modified-pink)
+    )
+));
+$original-palette-dark-theme: mat.define-dark-theme((
+    color: (
+        primary: mat.define-palette(palettes.$palette-original-teal),
+        accent: mat.define-palette(palettes.$palette-original-orange),
+        warn: mat.define-palette(palettes.$palette-original-pink)
+    )
+));
+$modified-palette-dark-theme: mat.define-dark-theme((
+    color: (
+        primary: mat.define-palette(palettes.$palette-modified-teal),
+        accent: mat.define-palette(palettes.$palette-modified-orange),
+        warn: mat.define-palette(palettes.$palette-modified-pink)
+    )
+));
+
+@include mat.all-component-typographies();
+@include mat.core();
+
+$selected-theme: $modified-palette-light-theme;
+
+@include mat.all-component-themes($selected-theme);
+@include materialContrastFix.theme($selected-theme);

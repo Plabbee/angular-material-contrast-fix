@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+
+@mixin theme($theme) {
+    .mat-mdc-checkbox {
+        &.mat-primary {
+            @include _checkbox-color($theme, primary);
+        }
+        &.mat-accent {
+            @include _checkbox-color($theme, accent);
+        }
+        &.mat-warn {
+            @include _checkbox-color($theme, warn);
+        }
+    }
+}
+
+@mixin _checkbox-color($theme, $palette) {
+    .mdc-checkbox__native-control:enabled~.mdc-checkbox__background {
+        .mdc-checkbox__checkmark {
+            color: mat.get-theme-color($theme, $palette, 500-contrast);
+        }
+    }
+}

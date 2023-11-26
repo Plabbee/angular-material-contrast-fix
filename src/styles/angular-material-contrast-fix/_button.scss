@@ -1,0 +1,63 @@
+@use '@angular/material' as mat;
+
+@mixin _unelevated-button-variant($theme, $palette) {
+    &:not(:disabled) {
+        color: mat.get-theme-color($theme, $palette, 500-contrast);
+    }
+}
+
+@mixin _raised-button-variant($theme, $palette) {
+    &:not(:disabled) {
+        color: mat.get-theme-color($theme, $palette, 500-contrast);
+    }
+}
+
+
+@mixin _fab-color($theme, $palette) {
+    color: mat.get-theme-color($theme, $palette, 500-contrast);
+}
+
+@mixin theme($theme) {
+    .mat-mdc-unelevated-button {
+        &.mat-primary {
+            @include _unelevated-button-variant($theme, primary);
+        }
+
+        &.mat-accent {
+            @include _unelevated-button-variant($theme, accent);
+        }
+
+        &.mat-warn {
+            @include _unelevated-button-variant($theme, warn);
+        }
+    }
+
+    .mat-mdc-raised-button {
+        &.mat-primary {
+            @include _raised-button-variant($theme, primary);
+        }
+
+        &.mat-accent {
+            @include _raised-button-variant($theme, accent);
+        }
+
+        &.mat-warn {
+            @include _raised-button-variant($theme, warn);
+        }
+    }
+
+    .mat-mdc-fab,
+    .mat-mdc-mini-fab {
+        &.mat-primary {
+            @include _fab-color($theme, primary);
+        }
+
+        &.mat-accent {
+            @include _fab-color($theme, accent);
+        }
+
+        &.mat-warn {
+            @include _fab-color($theme, warn);
+        }
+    }
+}
