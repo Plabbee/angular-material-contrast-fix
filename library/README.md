@@ -8,6 +8,7 @@ Since angular material version 15, some components haven't been using contrast c
 - Slide toggle
 - Checkbox
 - Datepicker
+
 Hopefully the issue ([bug(button): Palette contrast values are not applied · Issue #26056 · angular/components (github.com)](https://github.com/angular/components/issues/26056#issuecomment-1823079154)) is addressed soon and can mark this depreciated.
 ## Getting started
 - Install the package with `npm install angular-material-contrast-fix`
