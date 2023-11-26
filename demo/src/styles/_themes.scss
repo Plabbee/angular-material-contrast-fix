@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 @use './palettes' as palettes;
-@use '../../projects/angular-material-contrast-fix/index' as materialContrastFix;
+@use 'angular-material-contrast-fix';
 
 $original-palette-light-theme: mat.define-light-theme((
     color: (
@@ -37,4 +37,4 @@ $modified-palette-dark-theme: mat.define-dark-theme((
 $selected-theme: $modified-palette-light-theme;
 
 @include mat.all-component-themes($selected-theme);
-@include materialContrastFix.all-component-themes($selected-theme);
+@include angular-material-contrast-fix.all-component-themes($selected-theme);
