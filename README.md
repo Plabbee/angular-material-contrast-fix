@@ -28,4 +28,5 @@ Hopefully the issue ([bug(button): Palette contrast values are not applied · Is
 | checkbox-theme | Checkbox |
 | datepicker-theme | Datepicker |
 
-- Alternatively, just go to the github page and copy the styles
+- For more help, have a look at the demo app on the github page
+- Alternatively to using npm, just go to the github page and copy the styles
