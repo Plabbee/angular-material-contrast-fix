@@ -1,20 +1,39 @@
 @use '@angular/material' as mat;
 
 @mixin _unelevated-button-variant($theme, $palette) {
-    &:not(:disabled) {
-        color: mat.get-theme-color($theme, $palette, default-contrast);
-    }
+    --mdc-filled-button-label-text-color: #{mat.get-theme-color($theme, $palette, default-contrast)};
+    --mat-filled-button-ripple-color: #{rgba(mat.get-theme-color($theme, $palette, default-contrast), 0.1)};
+    --mat-filled-button-state-layer-color: #{mat.get-theme-color($theme, $palette, default-contrast)};
 }
 
 @mixin _raised-button-variant($theme, $palette) {
-    &:not(:disabled) {
-        color: mat.get-theme-color($theme, $palette, default-contrast);
-    }
+    --mdc-protected-button-label-text-color: #{mat.get-theme-color($theme, $palette, default-contrast)};
+    --mat-protected-button-ripple-color: #{rgba(mat.get-theme-color($theme, $palette, default-contrast), 0.1)};
+    --mat-protected-button-state-layer-color: #{mat.get-theme-color($theme, $palette, default-contrast)};
 }
 
 
 @mixin _fab-color($theme, $palette) {
-    color: mat.get-theme-color($theme, $palette, default-contrast);
+    --mat-fab-foreground-color: #{mat.get-theme-color($theme, $palette, default-contrast)};
+    --mat-fab-ripple-color: #{rgba(mat.get-theme-color($theme, $palette, default-contrast), 0.1)};
+    --mat-fab-state-layer-color: #{mat.get-theme-color($theme, $palette, default-contrast)};
+}
+
+@mixin _fab-colors($theme) {
+    .mat-mdc-fab,
+    .mat-mdc-mini-fab {
+        &.mat-primary {
+            @include _fab-color($theme, primary);
+        }
+
+        &.mat-accent {
+            @include _fab-color($theme, accent);
+        }
+
+        &.mat-warn {
+            @include _fab-color($theme, warn);
+        }
+    }
 }
 
 @mixin button-theme($theme) {
@@ -46,18 +65,9 @@
         }
     }
 
-    .mat-mdc-fab,
-    .mat-mdc-mini-fab {
-        &.mat-primary {
-            @include _fab-color($theme, primary);
-        }
-
-        &.mat-accent {
-            @include _fab-color($theme, accent);
-        }
-
-        &.mat-warn {
-            @include _fab-color($theme, warn);
-        }
+    @include _fab-colors($theme);
+    // Unsure why but the material fab styles target html, if anyone knows, let me know!
+    html {
+        @include _fab-colors($theme);
     }
 }

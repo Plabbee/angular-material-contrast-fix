@@ -18,6 +18,4 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class AppComponent {
   title = 'angular-material-contrast-fix';
-
-  selectedDate = '';
 }
