@@ -15,9 +15,5 @@
 }
 
 @mixin _checkbox-color($theme, $palette) {
-    .mdc-checkbox__native-control:enabled~.mdc-checkbox__background {
-        .mdc-checkbox__checkmark {
-            color: mat.get-theme-color($theme, $palette, default-contrast);
-        }
-    }
+    --mdc-checkbox-selected-checkmark-color: #{mat.get-theme-color($theme, $palette, default-contrast)};
 }
