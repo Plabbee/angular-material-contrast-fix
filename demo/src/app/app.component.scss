@@ -1,18 +1,33 @@
 :host {
+    display: block;
+    padding: 20px;
+}
+
+.theme-selection {
+    min-width: 300px;
+}
+
+.components-display {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 20px;
     max-width: 750px;
     column-gap: 10px;
     row-gap: 10px;
-    > h2 {
-        grid-column: 1 / span 3;
-    }
+}
 
-    @media (max-width: 600px) {
+h1, h2 {
+    grid-column: 1 / span 3;
+}
+
+@media (max-width: 600px) {
+    .theme-selection {
+        min-width: unset;
+        width: 100%;
+    }
+    .components-display {
         grid-template-columns: 1fr;
-        > h2 {
-            grid-column: 1;
-        }
+    }
+    h1, h2 {
+        grid-column: 1;
     }
 }

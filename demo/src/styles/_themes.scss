@@ -38,3 +38,18 @@ $selected-theme: $modified-palette-light-theme;
 
 @include mat.all-component-themes($selected-theme);
 @include angular-material-contrast-fix.all-component-themes($selected-theme);
+
+.light-theme-black-text {
+    @include mat.all-component-colors($original-palette-light-theme);
+    @include angular-material-contrast-fix.all-component-themes($original-palette-light-theme);
+}
+
+.dark-theme-white-text {
+    @include mat.all-component-colors($modified-palette-dark-theme);
+    @include angular-material-contrast-fix.all-component-themes($modified-palette-dark-theme);
+}
+
+.dark-theme-black-text {
+    @include mat.all-component-colors($original-palette-dark-theme);
+    @include angular-material-contrast-fix.all-component-themes($original-palette-dark-theme);
+}

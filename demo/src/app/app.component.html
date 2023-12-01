@@ -1,60 +1,71 @@
 <h1>Components</h1>
 
-<h2>Flat button</h2>
-<button mat-flat-button color="primary">Test</button>
-<button mat-flat-button color="accent">Test</button>
-<button mat-flat-button color="warn">Test</button>
-
-<h2>Raised button</h2>
-<button mat-raised-button color="primary">Test</button>
-<button mat-raised-button color="accent">Test</button>
-<button mat-raised-button color="warn">Test</button>
-
-<h2>Fab</h2>
-<button mat-fab color="primary">
-  <mat-icon fontIcon="check"></mat-icon>
-</button>
-<button mat-fab color="accent">
-  <mat-icon fontIcon="check"></mat-icon>
-</button>
-<button mat-fab color="warn">
-  <mat-icon fontIcon="check"></mat-icon>
-</button>
-
-<h2>Mini fab</h2>
-<button mat-mini-fab color="primary">
-  <mat-icon fontIcon="check"></mat-icon>
-</button>
-<button mat-mini-fab color="accent">
-  <mat-icon fontIcon="check"></mat-icon>
-</button>
-<button mat-mini-fab color="warn">
-  <mat-icon fontIcon="check"></mat-icon>
-</button>
-
-<h2>Slide toggle</h2>
-<mat-slide-toggle color="primary"></mat-slide-toggle>
-<mat-slide-toggle color="accent"></mat-slide-toggle>
-<mat-slide-toggle color="warn"></mat-slide-toggle>
-
-<h2>Checkbox</h2>
-<mat-checkbox color="primary"></mat-checkbox>
-<mat-checkbox color="accent"></mat-checkbox>
-<mat-checkbox color="warn"></mat-checkbox>
-
-<h2>Datepicker</h2>
-<mat-form-field color="primary">
-  <input matInput [matDatepicker]="primaryPicker">
-  <mat-datepicker-toggle matIconSuffix [for]="primaryPicker"></mat-datepicker-toggle>
-  <mat-datepicker #primaryPicker color="primary"></mat-datepicker>
+<mat-form-field class="theme-selection">
+  <mat-select [formControl]="themeControl">
+    <mat-option [value]="themes.lightWhite">Light theme / White contrast</mat-option>
+    <mat-option [value]="themes.lightBlack">Light theme / Black contrast</mat-option>
+    <mat-option [value]="themes.darkWhite">Dark theme / White contrast</mat-option>
+    <mat-option [value]="themes.darkBlack">Dark theme / Black contrast</mat-option>
+  </mat-select>
 </mat-form-field>
-<mat-form-field color="accent">
-  <input matInput [matDatepicker]="accentPicker">
-  <mat-datepicker-toggle matIconSuffix [for]="accentPicker"></mat-datepicker-toggle>
-  <mat-datepicker #accentPicker color="accent"></mat-datepicker>
-</mat-form-field>
-<mat-form-field color="warn">
-  <input matInput [matDatepicker]="warnPicker">
-  <mat-datepicker-toggle matIconSuffix [for]="warnPicker"></mat-datepicker-toggle>
-  <mat-datepicker #warnPicker color="warn"></mat-datepicker>
-</mat-form-field>
+
+<div class="components-display">
+  <h2>Flat button</h2>
+  <button mat-flat-button color="primary">Test</button>
+  <button mat-flat-button color="accent">Test</button>
+  <button mat-flat-button color="warn">Test</button>
+
+  <h2>Raised button</h2>
+  <button mat-raised-button color="primary">Test</button>
+  <button mat-raised-button color="accent">Test</button>
+  <button mat-raised-button color="warn">Test</button>
+
+  <h2>Fab</h2>
+  <button mat-fab color="primary">
+    <mat-icon fontIcon="check"></mat-icon>
+  </button>
+  <button mat-fab color="accent">
+    <mat-icon fontIcon="check"></mat-icon>
+  </button>
+  <button mat-fab color="warn">
+    <mat-icon fontIcon="check"></mat-icon>
+  </button>
+
+  <h2>Mini fab</h2>
+  <button mat-mini-fab color="primary">
+    <mat-icon fontIcon="check"></mat-icon>
+  </button>
+  <button mat-mini-fab color="accent">
+    <mat-icon fontIcon="check"></mat-icon>
+  </button>
+  <button mat-mini-fab color="warn">
+    <mat-icon fontIcon="check"></mat-icon>
+  </button>
+
+  <h2>Slide toggle</h2>
+  <mat-slide-toggle color="primary"></mat-slide-toggle>
+  <mat-slide-toggle color="accent"></mat-slide-toggle>
+  <mat-slide-toggle color="warn"></mat-slide-toggle>
+
+  <h2>Checkbox</h2>
+  <mat-checkbox color="primary"></mat-checkbox>
+  <mat-checkbox color="accent"></mat-checkbox>
+  <mat-checkbox color="warn"></mat-checkbox>
+
+  <h2>Datepicker</h2>
+  <mat-form-field color="primary">
+    <input matInput [matDatepicker]="primaryPicker">
+    <mat-datepicker-toggle matIconSuffix [for]="primaryPicker"></mat-datepicker-toggle>
+    <mat-datepicker #primaryPicker color="primary"></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field color="accent">
+    <input matInput [matDatepicker]="accentPicker">
+    <mat-datepicker-toggle matIconSuffix [for]="accentPicker"></mat-datepicker-toggle>
+    <mat-datepicker #accentPicker color="accent"></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field color="warn">
+    <input matInput [matDatepicker]="warnPicker">
+    <mat-datepicker-toggle matIconSuffix [for]="warnPicker"></mat-datepicker-toggle>
+    <mat-datepicker #warnPicker color="warn"></mat-datepicker>
+  </mat-form-field>
+</div>
