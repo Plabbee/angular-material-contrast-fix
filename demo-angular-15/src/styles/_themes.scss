@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 @use './palettes' as palettes;
-@use '../../../library' as angular-material-contrast-fix;
+@use 'angular-material-contrast-fix';
 
 $original-palette-light-theme: mat.define-light-theme((
     color: (
