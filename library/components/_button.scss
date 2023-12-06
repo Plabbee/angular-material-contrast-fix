@@ -1,25 +1,24 @@
-@use '@angular/material' as mat;
-@use 'sass:map';
+@use './core';
 
 @mixin _unelevated-button-variant($theme, $palette) {
-    --mdc-filled-button-label-text-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
-    --mat-filled-button-state-layer-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
-    --mat-mdc-button-persistent-ripple-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
-    --mat-mdc-button-ripple-color: #{rgba(mat.get-color-from-palette(map.get($theme, $palette), default-contrast), 0.1)};
+    --mdc-filled-button-label-text-color: #{core.get-theme-color($theme, $palette, default-contrast)};
+    --mat-filled-button-state-layer-color: #{core.get-theme-color($theme, $palette, default-contrast)};
+    --mat-mdc-button-persistent-ripple-color: #{core.get-theme-color($theme, $palette, default-contrast)};
+    --mat-mdc-button-ripple-color: #{rgba(core.get-theme-color($theme, $palette, default-contrast), 0.1)};
 }
 
 @mixin _raised-button-variant($theme, $palette) {
-    --mdc-protected-button-label-text-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
-    --mat-protected-button-state-layer-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
-    --mat-mdc-button-persistent-ripple-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
-    --mat-mdc-button-ripple-color: #{rgba(mat.get-color-from-palette(map.get($theme, $palette), default-contrast), 0.1)};
+    --mdc-protected-button-label-text-color: #{core.get-theme-color($theme, $palette, default-contrast)};
+    --mat-protected-button-state-layer-color: #{core.get-theme-color($theme, $palette, default-contrast)};
+    --mat-mdc-button-persistent-ripple-color: #{core.get-theme-color($theme, $palette, default-contrast)};
+    --mat-mdc-button-ripple-color: #{rgba(core.get-theme-color($theme, $palette, default-contrast), 0.1)};
 }
 
 @mixin _fab-color($theme, $palette) {
-    --mdc-fab-icon-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
-    --mat-mdc-fab-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
-    --mat-mdc-button-persistent-ripple-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
-    --mat-mdc-button-ripple-color: #{rgba(mat.get-color-from-palette(map.get($theme, $palette), default-contrast), 0.1)};
+    --mdc-fab-icon-color: #{core.get-theme-color($theme, $palette, default-contrast)};
+    --mat-mdc-fab-color: #{core.get-theme-color($theme, $palette, default-contrast)};
+    --mat-mdc-button-persistent-ripple-color: #{core.get-theme-color($theme, $palette, default-contrast)};
+    --mat-mdc-button-ripple-color: #{rgba(core.get-theme-color($theme, $palette, default-contrast), 0.1)};
 }
 
 @mixin _fab-colors($theme) {

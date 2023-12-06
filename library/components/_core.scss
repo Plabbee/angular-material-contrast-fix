@@ -1,0 +1,7 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+@function get-theme-color($theme, $palette, $contrast) {
+    $config: map.get($theme, $palette);
+    @return mat.get-color-from-palette($config, $contrast);
+}

@@ -1,5 +1,4 @@
-@use '@angular/material' as mat;
-@use 'sass:map';
+@use './core';
 
 @mixin datepicker-theme($theme) {
     .mat-datepicker-content {
@@ -16,5 +15,5 @@
 }
 
 @mixin _datepicker-color($theme, $palette) {
-    --mat-datepicker-calendar-date-selected-state-text-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
+    --mat-datepicker-calendar-date-selected-state-text-color: #{core.get-theme-color($theme, $palette, default-contrast)};
 }

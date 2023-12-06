@@ -1,5 +1,4 @@
-@use '@angular/material' as mat;
-@use 'sass:map';
+@use './core';
 
 @mixin slide-toggle-theme($theme) {
     .mat-mdc-slide-toggle {
@@ -16,5 +15,5 @@
 }
 
 @mixin _slide-toggle-color($theme, $palette) {
-    --mdc-switch-selected-icon-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
+    --mdc-switch-selected-icon-color: #{core.get-theme-color($theme, $palette, default-contrast)};
 }
