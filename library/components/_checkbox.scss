@@ -1,4 +1,5 @@
 @use '@angular/material' as mat;
+@use 'sass:map';
 
 @mixin checkbox-theme($theme) {
     .mat-mdc-checkbox {
@@ -15,5 +16,5 @@
 }
 
 @mixin _checkbox-color($theme, $palette) {
-    --mdc-checkbox-selected-checkmark-color: #{mat.get-theme-color($theme, $palette, default-contrast)};
+    --mdc-checkbox-selected-checkmark-color: #{mat.get-color-from-palette(map.get($theme, $palette), default-contrast)};
 }
