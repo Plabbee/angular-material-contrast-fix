@@ -1,0 +1,33 @@
+:host {
+    display: block;
+    padding: 20px;
+}
+
+.theme-selection {
+    min-width: 300px;
+}
+
+.components-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 750px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+h1, h2 {
+    grid-column: 1 / span 3;
+}
+
+@media (max-width: 600px) {
+    .theme-selection {
+        min-width: unset;
+        width: 100%;
+    }
+    .components-display {
+        grid-template-columns: 1fr;
+    }
+    h1, h2 {
+        grid-column: 1;
+    }
+}
