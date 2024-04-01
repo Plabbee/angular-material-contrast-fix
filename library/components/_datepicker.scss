@@ -1,6 +1,7 @@
 @use '@angular/material' as mat;
 
 @mixin datepicker-theme($theme) {
+    @warn "The datepicker-theme is depreciated as of @angular/material@17.2.2 peer dependency, as the underlying issue has been fixed. This mixin will be removed in v18.";
     .mat-datepicker-content {
         &.mat-primary {
             @include _datepicker-color($theme, primary);

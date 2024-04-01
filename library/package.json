@@ -1,6 +1,6 @@
 {
   "name": "angular-material-contrast-fix",
-  "version": "17.2.1",
+  "version": "17.2.2",
   "description": "Set of overrides to apply contrast colours from user defined palettes to angular material components",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     }
   },
   "peerDependencies": {
-    "@angular/material": ">= 17.0.0 < 18"
+    "@angular/material": ">= 17.2.2 < 18"
   },
   "repository": {
     "type": "git",
