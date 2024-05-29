@@ -2,32 +2,32 @@
 @use './palettes' as palettes;
 @use 'angular-material-contrast-fix';
 
-$original-palette-light-theme: mat.define-light-theme((
+$original-palette-light-theme: mat.m2-define-light-theme((
     color: (
-        primary: mat.define-palette(palettes.$palette-original-teal),
-        accent: mat.define-palette(palettes.$palette-original-orange),
-        warn: mat.define-palette(palettes.$palette-original-pink)
+        primary: mat.m2-define-palette(palettes.$palette-original-teal),
+        accent: mat.m2-define-palette(palettes.$palette-original-orange),
+        warn: mat.m2-define-palette(palettes.$palette-original-pink)
     )
 ));
-$modified-palette-light-theme: mat.define-light-theme((
+$modified-palette-light-theme: mat.m2-define-light-theme((
     color: (
-        primary: mat.define-palette(palettes.$palette-modified-teal),
-        accent: mat.define-palette(palettes.$palette-modified-orange),
-        warn: mat.define-palette(palettes.$palette-modified-pink)
+        primary: mat.m2-define-palette(palettes.$palette-modified-teal),
+        accent: mat.m2-define-palette(palettes.$palette-modified-orange),
+        warn: mat.m2-define-palette(palettes.$palette-modified-pink)
     )
 ));
-$original-palette-dark-theme: mat.define-dark-theme((
+$original-palette-dark-theme: mat.m2-define-dark-theme((
     color: (
-        primary: mat.define-palette(palettes.$palette-original-teal),
-        accent: mat.define-palette(palettes.$palette-original-orange),
-        warn: mat.define-palette(palettes.$palette-original-pink)
+        primary: mat.m2-define-palette(palettes.$palette-original-teal),
+        accent: mat.m2-define-palette(palettes.$palette-original-orange),
+        warn: mat.m2-define-palette(palettes.$palette-original-pink)
     )
 ));
-$modified-palette-dark-theme: mat.define-dark-theme((
+$modified-palette-dark-theme: mat.m2-define-dark-theme((
     color: (
-        primary: mat.define-palette(palettes.$palette-modified-teal),
-        accent: mat.define-palette(palettes.$palette-modified-orange),
-        warn: mat.define-palette(palettes.$palette-modified-pink)
+        primary: mat.m2-define-palette(palettes.$palette-modified-teal),
+        accent: mat.m2-define-palette(palettes.$palette-modified-orange),
+        warn: mat.m2-define-palette(palettes.$palette-modified-pink)
     )
 ));
 
