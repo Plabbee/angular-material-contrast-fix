@@ -27,10 +27,10 @@ As of @angular/material 17.2.2 this issue has been closed, and contrast issues f
 | Mixin | Components | Notes on version |
 | -- | -- | -- |
 | all-component-themes | All the components below | - |
-| button-theme | Buttons | Depreciated as of 17.2.2, to be removed in 18 |
+| button-theme | Buttons | Depreciated as of 17.2.2, removed in 18 |
 | slide-toggle-theme | Side toggle | - |
-| checkbox-theme | Checkbox | Depreciated as of 17.2.2, to be removed in 18 |
-| datepicker-theme | Datepicker | Depreciated as of 17.2.2, to be removed in 18 |
+| checkbox-theme | Checkbox | Depreciated as of 17.2.2, removed in 18 |
+| datepicker-theme | Datepicker | Depreciated as of 17.2.2, removed in 18 |
 
 - For more help, have a look at the demo app on the github page
 - Alternatively to using npm, just go to the github page and copy the styles
@@ -38,6 +38,6 @@ As of @angular/material 17.2.2 this issue has been closed, and contrast issues f
 ## Versions
 | @angular/material version | angular-material-contrast-fix version | Reason |
 | -- | -- | -- | 
-| 15, 16 | 15, 16 | - | 
+| 15, 16 | 16 | - | 
 | 17.0.0 - 17.2.1 | 17.2.1 | Switches to use new get-theme-color mixin available in @angular/material 17 | 
-| 17.2.2 - * | 17.2.2 - * | Existing issue has been fixed in @angular/material for buttons, checkboxes and datepickers. The slide toggle issue remains, but this is working as prior to @angular/material 15, so this remains in case the altered behaviour is your personal preference. | 
+| 17.2.2 - 18.* | 18 | Existing issue has been fixed in @angular/material for buttons, checkboxes and datepickers. The slide toggle issue remains, but this is working as prior to @angular/material 15, so this remains in case the altered behaviour is your personal preference. | 
